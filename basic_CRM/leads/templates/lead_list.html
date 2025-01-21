@@ -27,7 +27,9 @@
     <div>
       {% if leads %} {% for lead in leads %}
       <div class="lead">
-        <span>Clients Name:</span> {{ lead.first_name }} {{ lead.last_name }}
+        <a href="/leads/{{ lead.id }}"
+          ><span>Clients Name:</span> {{ lead.first_name }} {{ lead.last_name }}
+        </a>
         <span>Age:</span> {{ lead.age }}
       </div>
       {% endfor %} {% else %}
