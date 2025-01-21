@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lead List</title>
+
+    <style>
+      .lead {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 6px;
+        padding-left: 6px;
+        margin-top: 10px;
+        background-color: #f6f6f6;
+        width: 100%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All of our Leads</h1>
+
+    <div>
+      {% if leads %} {% for lead in leads %}
+      <div class="lead">
+        <span>Clients Name:</span> {{ lead.first_name }} {{ lead.last_name }}
+        <span>Age:</span> {{ lead.age }}
+      </div>
+      {% endfor %} {% else %}
+      <p>There are currently no leads available.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
