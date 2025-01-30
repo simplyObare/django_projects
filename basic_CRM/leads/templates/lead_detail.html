@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lead List</title>
+
+    <style>
+      .lead {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 6px;
+        padding-left: 6px;
+        margin-top: 10px;
+        background-color: #f6f6f6;
+        width: 100%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/leads">Go Back to leads</a>
+
+    <hr />
+    <h1>This are the details of {{lead.first_name}}</h1>
+
+    <div><p>This person is age: {{lead.age}}</p></div>
+  </body>
+</html>
